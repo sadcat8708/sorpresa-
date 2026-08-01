@@ -1,250 +1,192 @@
-# 🗺️ Roadmap - Mecatronix Hub | Homenaje al Profesor
+# 🗺️ Roadmap — Mecatronix Hub | Homenaje al Profesor
 
-## 🎯 Objetivo del Proyecto
+## Objetivo
 
-Crear una página web estática desarrollada con **HTML, CSS y JavaScript**, inspirada en una plataforma académica moderna, para sorprender a un profesor en su cumpleaños y agradecerle por su dedicación durante la formación de la **Promoción 2026 de Mecatrónica**.
+Crear una experiencia web estática para el cumpleaños del profesor de Mecatrónica. El recorrido debe comenzar como una plataforma tecnológica de la Promoción 2026 y revelar gradualmente los recuerdos, agradecimientos y la carta final.
 
----
+## Estado general
 
-# 📅 Fase 1 - Planeación
-
-## Objetivos
-
-- Definir la idea principal.
-- Elegir la identidad visual.
-- Recolectar el contenido.
-
-### Tareas
-
-- [ ] Definir nombre del proyecto.
-- [ ] Diseñar el logo.
-- [ ] Elegir paleta de colores.
-- [ ] Elegir tipografías.
-- [ ] Recolectar fotografías.
-- [ ] Recolectar mensajes de los estudiantes.
-- [ ] Preparar carta de despedida.
-- [ ] Elegir música (opcional).
+| Fase | Estado | Resultado esperado |
+| --- | --- | --- |
+| 1. Planeación | Completada | Narrativa, secciones y arquitectura definidas. |
+| 2. Diseño base | Completada | Sistema visual SaaS/Dashboard, paleta y tipografías integradas. |
+| 3. Estructura modular | Completada | Shell, parciales HTML, CSS y JS separados por responsabilidad. |
+| 4. Contenido real | En curso | Fotografías, nombres, mensajes y carta definitiva del curso. |
+| 5. Interacciones | Pendiente | Galería, contadores, timeline, audio y revelación final. |
+| 6. QA y entrega | Pendiente | Pruebas, accesibilidad, optimización y publicación. |
 
 ---
 
-# 🎨 Fase 2 - Diseño UI/UX
+## Fase 1 — Planeación ✅
 
-## Objetivos
+### Entregables completados
 
-Diseñar una interfaz moderna inspirada en un dashboard.
+- [x] Definir el concepto: plataforma tecnológica que se transforma en homenaje.
+- [x] Definir la secuencia de descubrimiento: Inicio → Dashboard → Profesor → Proyectos → Galería → Timeline → Mensajes → Carta.
+- [x] Definir las secciones y su responsabilidad.
+- [x] Elegir identidad visual inicial: azul, celeste, blanco y gris claro.
+- [x] Elegir tipografías: Outfit para títulos e Inter para contenido.
+- [x] Definir una arquitectura sin frameworks, con HTML, CSS y JavaScript nativos.
 
-### Pantallas
+### Pendientes de contenido
 
-- [ ] Inicio
-- [ ] Dashboard
-- [ ] Profesor
-- [ ] Galería
-- [ ] Mensajes
-- [ ] Calendario
-- [ ] Carta Final
-
-### Componentes
-
-- [ ] Navbar
-- [ ] Hero
-- [ ] Cards
-- [ ] Footer
-- [ ] Botones
-- [ ] Iconos
+- [ ] Confirmar el nombre completo y la fotografía autorizada del profesor.
+- [ ] Recolectar fotografías con permiso de quienes aparezcan en ellas.
+- [ ] Recolectar mensajes finales de los estudiantes.
+- [ ] Aprobar la carta definitiva de la Promoción 2026.
+- [ ] Seleccionar música opcional y comprobar que puede usarse.
 
 ---
 
-# 💻 Fase 3 - Desarrollo Frontend
+## Fase 2 — Diseño base ✅
 
-## HTML
+### Sistema visual implementado
 
-- [ ] Crear estructura principal.
-- [ ] Agregar secciones.
-- [ ] Organizar el contenido.
+- [x] Paleta principal: azul `#2563EB`, celeste `#38BDF8`, fondos claros y texto oscuro.
+- [x] Variables CSS centralizadas en `css/variables.css`.
+- [x] Tipografías de Google Fonts integradas en el shell.
+- [x] Estética moderna de Dashboard/SaaS en tarjetas, panel de estado, grids y línea temporal.
+- [x] Diseño responsive para desktop, tablet y celular.
+- [x] Estados básicos de interacción para enlaces, botones y tarjetas.
 
-## CSS
+### Decisiones de UX
 
-- [ ] Diseño responsive.
-- [ ] Tarjetas.
-- [ ] Animaciones.
-- [ ] Efectos hover.
-- [ ] Variables de colores.
-
-## JavaScript
-
-- [ ] Navegación.
-- [ ] Animaciones.
-- [ ] Contadores.
-- [ ] Carta interactiva.
-- [ ] Confeti.
-- [ ] Música.
+1. El Hero presenta el hub sin revelar inmediatamente la sorpresa.
+2. El Dashboard valida la identidad académica con métricas simbólicas.
+3. Profesor, proyectos, galería y timeline añaden contexto emocional.
+4. Los mensajes preparan el cierre.
+5. La carta final revela el homenaje completo.
 
 ---
 
-# 🏠 Fase 4 - Secciones
+## Fase 3 — Arquitectura y desarrollo base ✅
 
-## Inicio
+### Shell de la aplicación
 
-- Hero principal.
-- Mensaje de bienvenida.
-- Botón principal.
-- Imagen representativa.
+- [x] `index.html` contiene metadatos, fuentes, enlaces CSS, navegación, contenedores y el punto de entrada JavaScript.
+- [x] `js/main.js` carga los fragmentos HTML en orden para preservar el recorrido narrativo.
+- [x] La navegación usa enlaces internos accesibles y menú móvil.
 
----
+### Fragmentos HTML
 
-## Dashboard
+- [x] `pages/hero.html`
+- [x] `pages/dashboard.html`
+- [x] `pages/professor.html`
+- [x] `pages/projects.html`
+- [x] `pages/gallery.html`
+- [x] `pages/timeline.html`
+- [x] `pages/messages.html`
+- [x] `pages/letter.html`
+- [x] `pages/footer.html`
 
-Tarjetas informativas.
+### Estilos modulares
 
-- Clases impartidas.
-- Proyectos realizados.
-- Estudiantes formados.
-- Años de experiencia.
+- [x] Tokens, reset, estilos globales y layout.
+- [x] Un archivo CSS por componente: navbar, hero, dashboard, professor, projects, gallery, timeline, messages, letter y footer.
+- [x] Archivos separados para animaciones y reglas responsive.
 
----
+### JavaScript modular
 
-## Profesor
-
-Información del profesor.
-
-- Fotografía.
-- Nombre.
-- Frase.
-- Agradecimiento.
-
----
-
-## Galería
-
-- Fotos del curso.
-- Fotos de proyectos.
-- Fotos de actividades.
+- [x] `main.js`: composición de la interfaz.
+- [x] `navbar.js`: menú móvil accesible.
+- [x] `gallery.js`, `timeline.js`, `animations.js`, `confetti.js`, `audio.js` y `typing.js`: puntos de extensión aislados.
 
 ---
 
-## Calendario
+## Fase 4 — Contenido definitivo 🔄
 
-Fechas importantes.
+### Profesor
 
-- Cumpleaños.
-- Inicio de clases.
-- Proyectos.
-- Graduación.
+- [ ] Añadir su nombre, cargo y frase que haya aprobado.
+- [ ] Reemplazar `img/professor/profesor-principal.jpg` por la fotografía final.
+- [ ] Revisar que el texto alternativo describa correctamente la foto definitiva.
 
----
+### Galería
 
-## Mensajes
+- [ ] Crear `img/gallery/` y añadir imágenes optimizadas en WebP o AVIF.
+- [ ] Reemplazar las tres imágenes de ejemplo por fotografías reales.
+- [ ] Escribir pies de foto concretos y respetuosos.
 
-Cada estudiante deja un mensaje corto.
+### Mensajes y carta
 
-Ejemplo:
+- [ ] Reemplazar testimonios de ejemplo por mensajes aprobados de estudiantes.
+- [ ] Confirmar ortografía de nombres y firmas.
+- [ ] Ajustar la carta final con la versión consensuada por el curso.
 
-> Gracias por enseñarnos más que electrónica. Nunca olvidaremos sus clases.
+### Métricas y timeline
 
----
+- [ ] Verificar cifras reales antes de publicarlas.
+- [ ] Ajustar hitos y fechas relevantes de la promoción.
+- [ ] Incluir graduación o cumpleaños solo cuando la fecha esté confirmada.
 
-## Carta Final
-
-Carta escrita por toda la Promoción 2026.
-
----
-
-# ✨ Fase 5 - Animaciones
-
-Agregar efectos visuales.
-
-- [ ] Fade In
-- [ ] Slide Up
-- [ ] Hover Cards
-- [ ] Glow
-- [ ] Typewriter
-- [ ] Scroll Reveal
-- [ ] Confeti
-- [ ] Fuegos Artificiales
-- [ ] Música de fondo
+**Criterio de cierre:** no quedan textos de ejemplo ni rutas de imágenes inexistentes.
 
 ---
 
-# 🎉 Fase 6 - Experiencia del Usuario
+## Fase 5 — Interacciones y animaciones ⏳
 
-La navegación debe sentirse como una historia.
+Implementar con mejora progresiva: el contenido debe seguir siendo legible aunque JavaScript falle o el usuario prefiera reducir movimiento.
+
+- [ ] Contadores del Dashboard con `IntersectionObserver`.
+- [ ] Revelado suave de secciones al entrar al viewport.
+- [ ] Modal accesible para ampliar imágenes de la galería.
+- [ ] Resaltado del hito activo en la Timeline.
+- [ ] Efecto de escritura opcional para la carta, sin ocultar el texto al inicio.
+- [ ] Botón explícito de reproducción de audio; nunca iniciar audio automáticamente.
+- [ ] Confeti activado únicamente tras una acción clara del usuario al final del recorrido.
+- [ ] Probar `prefers-reduced-motion` y desactivar efectos decorativos cuando corresponda.
+
+**Criterio de cierre:** las animaciones aportan significado, no bloquean navegación y no reducen accesibilidad.
+
+---
+
+## Fase 6 — Calidad, accesibilidad y optimización ⏳
+
+### Accesibilidad
+
+- [ ] Validar jerarquía de encabezados y landmarks HTML.
+- [ ] Probar navegación completa con teclado.
+- [ ] Revisar foco visible, contraste de color y tamaño de texto.
+- [ ] Validar `alt` de todas las fotografías reales.
+- [ ] Comprobar el menú móvil con lector de pantalla.
+
+### Rendimiento
+
+- [ ] Convertir imágenes a WebP/AVIF y definir dimensiones.
+- [ ] Aplicar carga diferida a la galería.
+- [ ] Comprimir audio y vídeo antes de añadirlos.
+- [ ] Medir rendimiento en móvil con Lighthouse.
+
+### Pruebas y entrega
+
+- [ ] Probar Chrome, Edge, Firefox y Safari si es posible.
+- [ ] Probar resoluciones móvil, tablet y escritorio.
+- [ ] Comprobar que el proyecto se abre desde un servidor local estático.
+- [ ] Revisar enlaces internos, imágenes y consola sin errores.
+- [ ] Preparar una copia de respaldo antes de la presentación.
+
+**Criterio de cierre:** experiencia funcional, accesible y verificada en los dispositivos disponibles.
+
+---
+
+## Orden recomendado de trabajo
 
 ```text
-Inicio
-   │
-   ▼
-Dashboard
-   │
-   ▼
-Profesor
-   │
-   ▼
-Galería
-   │
-   ▼
-Mensajes
-   │
-   ▼
-Carta Final
-   │
-   ▼
-🎂 Feliz Cumpleaños Profesor
+Contenido definitivo
+        ↓
+Recursos optimizados
+        ↓
+Interacciones accesibles
+        ↓
+Pruebas responsive y de accesibilidad
+        ↓
+Ensayo de la presentación
+        ↓
+Entrega al profesor 🎂
 ```
 
----
+## Guía de uso local
 
-# 📂 Organización del Proyecto
+Como `js/main.js` carga los fragmentos desde `pages/`, el proyecto debe abrirse con un servidor local estático (por ejemplo, Live Server en VS Code). Abrir `index.html` directamente mediante `file://` impide que el navegador cargue esos fragmentos.
 
-```text
-MecatronixHub/
-
-│
-├── index.html
-│
-├── css/
-│   ├── style.css
-│   ├── animations.css
-│   ├── responsive.css
-│
-├── js/
-│   ├── script.js
-│   ├── gallery.js
-│   ├── effects.js
-│
-├── img/
-│   ├── logo/
-│   ├── profesor/
-│   ├── estudiantes/
-│   ├── fondo/
-│   └── iconos/
-│
-├── audio/
-│   └── musica.mp3
-│
-├── video/
-│   └── despedida.mp4
-│
-└── README.md
-```
-
----
-
-# 📆 Cronograma
-
-| Día | Actividad |
-|------|-----------|
-| Día 1 | Planeación y recopilación de contenido |
-| Día 2 | Diseño de la interfaz |
-| Día 3 | Desarrollo del HTML |
-| Día 4 | Estilos CSS |
-| Día 5 | Programación en JavaScript |
-| Día 6 | Animaciones y efectos |
-| Día 7 | Pruebas finales y presentación |
-
----
-
-# 🚀 Objetivo Final
-
-Crear una experiencia web donde el profesor piense que está ingresando a una plataforma desarrollada por la **Promoción 2026 de Mecatrónica**, y poco a poco descubra un homenaje lleno de recuerdos, agradecimientos y una felicitación de cumpleaños que refleje el cariño y respeto de todos sus estudiantes.
-
-> **"Las máquinas pueden construir el futuro, pero son los profesores quienes construyen a quienes las crean."**
+> “Las máquinas pueden construir el futuro, pero son los profesores quienes construyen a quienes las crean.”
