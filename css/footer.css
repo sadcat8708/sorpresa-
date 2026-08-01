@@ -1,0 +1,2 @@
+/* Pie de página limpio y de baja jerarquía visual. */
+.site-footer { border-top:1px solid var(--line); color:var(--muted); display:flex; font-size:.78rem; gap:1rem; justify-content:space-between; margin:auto; max-width:var(--max-width); padding:2rem 1.5rem; } .site-footer a { color:var(--blue-700); font-weight:700; }

@@ -1,0 +1,2 @@
+/* Cuadrícula preparada para el futuro visor de imágenes. */
+.gallery-item { background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; } .gallery-item img { aspect-ratio:4/3; background:#dbeafe; object-fit:cover; width:100%; } .gallery-item figcaption { color:var(--muted); font-size:.85rem; padding:1rem; }
