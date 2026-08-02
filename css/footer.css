@@ -1,2 +1,2 @@
 /* Pie de página limpio y de baja jerarquía visual. */
-.site-footer { border-top:1px solid var(--line); color:var(--muted); display:flex; font-size:.78rem; gap:1rem; justify-content:space-between; margin:auto; max-width:var(--max-width); padding:2rem 1.5rem; } .site-footer a { color:var(--blue-700); font-weight:700; } .audio-toggle { background:#e0f2fe; border:1px solid #bae6fd; border-radius:99px; color:var(--blue-700); cursor:pointer; font-size:.78rem; font-weight:700; padding:.35rem .7rem; }
+.site-footer { border-top:1px solid var(--line); color:var(--muted); display:flex; font-size:.78rem; gap:1rem; justify-content:space-between; margin:auto; max-width:var(--max-width); padding:2rem 1.5rem; } .site-footer a { color:var(--blue-700); font-weight:700; }

@@ -12,7 +12,7 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 | 2. Diseño base | Completada | Sistema visual SaaS/Dashboard, paleta y tipografías integradas. |
 | 3. Estructura modular | Completada | Shell, acceso de demostración, parciales HTML, CSS y JS separados por responsabilidad. |
 | 4. Contenido real | En curso | Fotografías, nombres, mensajes y carta definitiva del curso. |
-| 5. Interacciones | En curso | Galería, timeline, audio y revelación final con base funcional. |
+| 5. Interacciones | En curso | Galería, timeline y revelación final con base funcional. |
 | 6. QA y entrega | Pendiente | Pruebas, accesibilidad, optimización y publicación. |
 
 ---
@@ -34,7 +34,6 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 - [ ] Recolectar fotografías con permiso de quienes aparezcan en ellas.
 - [ ] Recolectar mensajes finales de los estudiantes.
 - [ ] Aprobar la carta definitiva de la Promoción 2026.
-- [ ] Seleccionar música opcional y comprobar que puede usarse.
 
 ---
 
@@ -91,7 +90,7 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 - [x] `main.js`: composición de la interfaz.
 - [x] `auth.js`: validación local de demostración y desbloqueo del contenido.
 - [x] `navbar.js`: menú móvil accesible.
-- [x] `gallery.js`, `timeline.js`, `animations.js`, `confetti.js`, `audio.js` y `typing.js`: puntos de extensión aislados.
+- [x] `gallery.js`, `timeline.js`, `animations.js`, `confetti.js` y `typing.js`: puntos de extensión aislados.
 
 ---
 
@@ -134,7 +133,6 @@ Implementar con mejora progresiva: el contenido debe seguir siendo legible aunqu
 - [x] Modal accesible para ampliar imágenes de la galería.
 - [x] Revelado de cada hito de la Timeline.
 - [x] Efecto de escritura progresivo para la carta.
-- [x] Botón explícito de reproducción de audio; nunca inicia audio automáticamente.
 - [x] Confeti y celebración al finalizar la carta.
 - [x] Soporte para `prefers-reduced-motion`.
 
@@ -156,7 +154,7 @@ Implementar con mejora progresiva: el contenido debe seguir siendo legible aunqu
 
 - [ ] Convertir imágenes a WebP/AVIF y definir dimensiones.
 - [ ] Aplicar carga diferida a la galería.
-- [ ] Comprimir audio y vídeo antes de añadirlos.
+- [ ] Comprimir el vídeo antes de añadirlo.
 - [ ] Medir rendimiento en móvil con Lighthouse.
 
 ### Pruebas y entrega

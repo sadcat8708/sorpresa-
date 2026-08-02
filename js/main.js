@@ -4,7 +4,6 @@ import { initGallery } from "./gallery.js";
 import { initAnimations } from "./animations.js";
 import { initTimeline } from "./timeline.js";
 import { initConfetti } from "./confetti.js";
-import { initAudio } from "./audio.js";
 import { initTyping } from "./typing.js";
 import { initAuth } from "./auth.js";
 import { initSplash } from "./splash.js";
@@ -25,7 +24,7 @@ async function bootstrap() {
     // La carga es secuencial para conservar el orden narrativo del recorrido.
     for (const file of sectionFiles) await loadFragment(file, content);
     await loadFragment("footer", footer);
-    [initNavbar, initGallery, initAnimations, initTimeline, initConfetti, initAudio, initTyping].forEach((init) => init());
+    [initNavbar, initGallery, initAnimations, initTimeline, initConfetti, initTyping].forEach((init) => init());
   } catch (error) {
     console.error(error);
     content.innerHTML = "<p class=\"loading-message\">No fue posible cargar el contenido. Abre el proyecto mediante un servidor local.</p>";

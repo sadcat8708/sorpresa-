@@ -43,7 +43,6 @@ Mecatronix-Hub/
 │   ├── gallery.js
 │   └── [feature].js
 ├── img/
-├── audio/
 ├── video/
 └── README.md
 ```
