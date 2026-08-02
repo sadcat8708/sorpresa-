@@ -1,2 +1,2 @@
 /* Transiciones compartidas; animations.js añadirá clases al entrar al viewport. */
-@media (prefers-reduced-motion:no-preference) { .section-shell { animation:fade-up .55s both; } @keyframes fade-up { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } } }
+@media (prefers-reduced-motion:no-preference) { .js-ready .section-shell,.js-ready .message-card { opacity:0; transform:translateY(18px); transition:opacity .55s ease,transform .55s ease; } .js-ready .section-shell.is-visible,.js-ready .message-card.is-visible { opacity:1; transform:translateY(0); } } @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }

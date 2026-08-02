@@ -10,4 +10,8 @@ export function initNavbar() {
   navigation.addEventListener("click", (event) => {
     if (event.target.matches("a")) { navigation.classList.remove("is-open"); toggle.setAttribute("aria-expanded", "false"); }
   });
+  // Actualiza visualmente el enlace activo según la sección visible.
+  const links = [...navigation.querySelectorAll("a")];
+  const observer = new IntersectionObserver((entries) => entries.forEach(({ isIntersecting, target }) => { if (isIntersecting) links.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${target.id}`)); }), { rootMargin: "-40% 0px -52%" });
+  links.forEach((link) => { const section = document.querySelector(link.getAttribute("href")); if (section) observer.observe(section); });
 }

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/splash.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/professor.css" />
@@ -32,11 +33,22 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <!-- SPLASH: presentación breve previa a la puerta de acceso. -->
+    <section class="splash-screen" id="splash-screen" aria-labelledby="splash-title">
+      <div class="splash-content">
+        <span class="splash-mark" aria-hidden="true">MH</span>
+        <p class="eyebrow">Promoción 2026 · Mecatrónica</p>
+        <h1 id="splash-title">Mecatronix Hub</h1>
+        <p>Inicializando sistema…</p>
+        <div class="splash-progress" role="progressbar" aria-label="Inicializando sistema" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+      </div>
+    </section>
+
     <!-- ================================================================ -->
     <!-- PANTALLA DE ACCESO                                              -->
     <!-- Es una validación local de demostración, sin base de datos.     -->
     <!-- ================================================================ -->
-    <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title">
+    <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title" hidden>
       <div class="auth-card">
         <p class="eyebrow">Acceso restringido · Promoción 2026</p>
         <span class="auth-mark" aria-hidden="true">MH</span>

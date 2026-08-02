@@ -7,6 +7,7 @@ import { initConfetti } from "./confetti.js";
 import { initAudio } from "./audio.js";
 import { initTyping } from "./typing.js";
 import { initAuth } from "./auth.js";
+import { initSplash } from "./splash.js";
 
 const sectionFiles = ["hero", "dashboard", "professor", "projects", "gallery", "timeline", "messages", "letter"];
 
@@ -31,5 +32,5 @@ async function bootstrap() {
   }
 }
 
-// La carga del dashboard comienza únicamente cuando auth.js autoriza el acceso.
-initAuth(bootstrap);
+// La secuencia es Splash → Login → Dashboard; cada pantalla libera la siguiente.
+initSplash(() => initAuth(bootstrap));

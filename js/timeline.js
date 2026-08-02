@@ -1,5 +1,6 @@
-// Punto de extensión para resaltar el hito visible en la línea de tiempo.
+// Revela cada hito al entrar al viewport, sin afectar el contenido base.
 export function initTimeline() {
-  const timeline = document.querySelector(".timeline-list");
-  if (timeline) timeline.setAttribute("data-enhanced", "true");
+  const items = document.querySelectorAll(".timeline-list li");
+  const observer = new IntersectionObserver((entries) => entries.forEach(({ isIntersecting, target }) => { if (isIntersecting) { target.classList.add("is-visible"); observer.unobserve(target); } }), { threshold: .2 });
+  items.forEach((item) => observer.observe(item));
 }

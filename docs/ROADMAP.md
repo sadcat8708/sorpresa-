@@ -12,7 +12,7 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 | 2. Diseño base | Completada | Sistema visual SaaS/Dashboard, paleta y tipografías integradas. |
 | 3. Estructura modular | Completada | Shell, acceso de demostración, parciales HTML, CSS y JS separados por responsabilidad. |
 | 4. Contenido real | En curso | Fotografías, nombres, mensajes y carta definitiva del curso. |
-| 5. Interacciones | Pendiente | Galería, contadores, timeline, audio y revelación final. |
+| 5. Interacciones | En curso | Galería, timeline, audio y revelación final con base funcional. |
 | 6. QA y entrega | Pendiente | Pruebas, accesibilidad, optimización y publicación. |
 
 ---
@@ -129,14 +129,14 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 
 Implementar con mejora progresiva: el contenido debe seguir siendo legible aunque JavaScript falle o el usuario prefiera reducir movimiento.
 
-- [ ] Contadores del Dashboard con `IntersectionObserver`.
-- [ ] Revelado suave de secciones al entrar al viewport.
-- [ ] Modal accesible para ampliar imágenes de la galería.
-- [ ] Resaltado del hito activo en la Timeline.
-- [ ] Efecto de escritura opcional para la carta, sin ocultar el texto al inicio.
-- [ ] Botón explícito de reproducción de audio; nunca iniciar audio automáticamente.
-- [ ] Confeti activado únicamente tras una acción clara del usuario al final del recorrido.
-- [ ] Probar `prefers-reduced-motion` y desactivar efectos decorativos cuando corresponda.
+- [x] Contadores del Dashboard con `IntersectionObserver`.
+- [x] Revelado suave de secciones y mensajes al entrar al viewport.
+- [x] Modal accesible para ampliar imágenes de la galería.
+- [x] Revelado de cada hito de la Timeline.
+- [x] Efecto de escritura progresivo para la carta.
+- [x] Botón explícito de reproducción de audio; nunca inicia audio automáticamente.
+- [x] Confeti y celebración al finalizar la carta.
+- [x] Soporte para `prefers-reduced-motion`.
 
 **Criterio de cierre:** las animaciones aportan significado, no bloquean navegación y no reducen accesibilidad.
 

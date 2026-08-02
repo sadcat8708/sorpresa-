@@ -1,6 +1,13 @@
 // Autenticación de demostración: esta clave es visible en el navegador y no protege datos reales.
-const DEMO_PASSWORD = "Mecatronix2026";
-const LOADING_DELAY_MS = 1100;
+const DEMO_PASSWORD = "123";
+const LOADING_DELAY_MS = 2500;
+const ACCESS_MESSAGES = ["Verificando credenciales…", "Cargando módulos…", "Preparando experiencia…", "Acceso concedido."];
+
+// Actualiza el mensaje de carga sin crear una nueva estructura visual.
+function showAccessMessages(loading) {
+  const message = loading.querySelector("p");
+  ACCESS_MESSAGES.forEach((text, index) => window.setTimeout(() => { message.textContent = text; }, index * 600));
+}
 
 // Conecta el formulario de acceso y ejecuta onAuthorized solo tras validar la clave.
 export function initAuth(onAuthorized) {
@@ -22,6 +29,7 @@ export function initAuth(onAuthorized) {
     // Paso 1: se reemplaza el formulario por un estado de carga sin recargar la página.
     form.hidden = true;
     loading.hidden = false;
+    showAccessMessages(loading);
     window.setTimeout(() => {
       // Paso 2: se muestra el dashboard y se inicia su transición de entrada.
       app.hidden = false;
