@@ -10,7 +10,7 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 | --- | --- | --- |
 | 1. Planeación | Completada | Narrativa, secciones y arquitectura definidas. |
 | 2. Diseño base | Completada | Sistema visual SaaS/Dashboard, paleta y tipografías integradas. |
-| 3. Estructura modular | Completada | Shell, parciales HTML, CSS y JS separados por responsabilidad. |
+| 3. Estructura modular | Completada | Shell, acceso de demostración, parciales HTML, CSS y JS separados por responsabilidad. |
 | 4. Contenido real | En curso | Fotografías, nombres, mensajes y carta definitiva del curso. |
 | 5. Interacciones | Pendiente | Galería, contadores, timeline, audio y revelación final. |
 | 6. QA y entrega | Pendiente | Pruebas, accesibilidad, optimización y publicación. |
@@ -66,6 +66,7 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 - [x] `index.html` contiene metadatos, fuentes, enlaces CSS, navegación, contenedores y el punto de entrada JavaScript.
 - [x] `js/main.js` carga los fragmentos HTML en orden para preservar el recorrido narrativo.
 - [x] La navegación usa enlaces internos accesibles y menú móvil.
+- [x] Pantalla de autenticación local previa al dashboard, con validación, mensaje de error y estado de carga.
 
 ### Fragmentos HTML
 
@@ -88,6 +89,7 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 ### JavaScript modular
 
 - [x] `main.js`: composición de la interfaz.
+- [x] `auth.js`: validación local de demostración y desbloqueo del contenido.
 - [x] `navbar.js`: menú móvil accesible.
 - [x] `gallery.js`, `timeline.js`, `animations.js`, `confetti.js`, `audio.js` y `typing.js`: puntos de extensión aislados.
 

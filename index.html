@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/auth.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/professor.css" />
@@ -31,29 +32,44 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <!-- Cabecera persistente: los módulos del contenido se cargan abajo. -->
-    <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Ir al inicio de Mecatronix Hub">
-        <span class="brand-mark" aria-hidden="true">MH</span>
-        <span>Mecatronix <strong>Hub</strong></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
-        <span class="sr-only">Abrir menú</span><span aria-hidden="true">☰</span>
-      </button>
-      <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal">
-        <a href="#home">Inicio</a><a href="#dashboard">Dashboard</a><a href="#professor">Profesor</a>
-        <a href="#gallery">Galería</a><a href="#timeline">Recorrido</a><a href="#letter">Carta final</a>
-      </nav>
-    </header>
+    <!-- ================================================================ -->
+    <!-- PANTALLA DE ACCESO                                              -->
+    <!-- Es una validación local de demostración, sin base de datos.     -->
+    <!-- ================================================================ -->
+    <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title">
+      <div class="auth-card">
+        <p class="eyebrow">Acceso restringido · Promoción 2026</p>
+        <span class="auth-mark" aria-hidden="true">MH</span>
+        <h1 id="auth-title">Mecatronix Hub</h1>
+        <p class="auth-description">Ingresa tus datos para iniciar el recorrido especial de la promoción.</p>
+        <!-- El formulario no se envía al servidor: auth.js lo valida localmente. -->
+        <form class="auth-form" id="auth-form" novalidate>
+          <label for="username">Usuario</label>
+          <input id="username" name="username" type="text" autocomplete="username" placeholder="Tu nombre" required />
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+          <!-- Mensaje accesible actualizado sin recargar la página. -->
+          <p class="auth-feedback" id="auth-feedback" role="alert" aria-live="polite"></p>
+          <button class="button button-primary auth-submit" type="submit">Ingresar <span aria-hidden="true">→</span></button>
+        </form>
+        <!-- Estado de carga mostrado solo después de una validación correcta. -->
+        <div class="auth-loading" id="auth-loading" hidden aria-live="polite"><span class="loading-spinner" aria-hidden="true"></span><p>Iniciando sistema Mecatronix Hub…</p></div>
+      </div>
+    </section>
 
-    <!-- Contenedor principal: cada sección conserva su archivo HTML independiente. -->
-    <main id="app-content" aria-live="polite">
-      <!-- main.js inserta hero, dashboard, professor, projects, gallery, timeline, messages y letter. -->
-      <p class="loading-message">Preparando Mecatronix Hub…</p>
-    </main>
-
-    <!-- Contenedor independiente para el pie de página. -->
-    <div id="footer-slot"></div>
+    <!-- El dashboard se mantiene oculto hasta que auth.js autorice el acceso. -->
+    <div id="protected-app" hidden>
+      <!-- Cabecera persistente: los módulos del contenido se cargan abajo. -->
+      <header class="site-header" id="top">
+        <a class="brand" href="#top" aria-label="Ir al inicio de Mecatronix Hub"><span class="brand-mark" aria-hidden="true">MH</span><span>Mecatronix <strong>Hub</strong></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="sr-only">Abrir menú</span><span aria-hidden="true">☰</span></button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal"><a href="#home">Inicio</a><a href="#dashboard">Dashboard</a><a href="#professor">Profesor</a><a href="#gallery">Galería</a><a href="#timeline">Recorrido</a><a href="#letter">Carta final</a></nav>
+      </header>
+      <!-- Contenedor principal: main.js inserta los módulos HTML independientes. -->
+      <main id="app-content" aria-live="polite"><p class="loading-message">Preparando Mecatronix Hub…</p></main>
+      <!-- Contenedor independiente para el pie de página. -->
+      <div id="footer-slot"></div>
+    </div>
 
     <!-- Punto de entrada de los módulos JavaScript. -->
     <script type="module" src="js/main.js"></script>
