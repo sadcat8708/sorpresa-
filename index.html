@@ -4,8 +4,8 @@
     <!-- Documento base: las secciones se insertan desde pages/ con main.js. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mecatronix Hub, homenaje de la Promoción 2026." />
-    <title>Mecatronix Hub | Promoción 2026</title>
+    <meta name="description" content="Homenaje de la Promoción 2026." />
+    <title>PROM 2026</title>
 
     <!-- Tipografías para la identidad tecnológica y legible del sitio. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,9 +39,9 @@
     <!-- SPLASH: presentación breve previa a la puerta de acceso. -->
     <section class="splash-screen" id="splash-screen" aria-labelledby="splash-title">
       <div class="splash-content">
-        <span class="splash-mark" aria-hidden="true">MH</span>
+        <span class="splash-mark" aria-hidden="true">HUB</span>
         <p class="eyebrow">Promoción 2026 · Mecatrónica</p>
-        <h1 id="splash-title">Mecatronix Hub</h1>
+        <h1 id="splash-title">PROM-2026</h1>
         <p>Inicializando sistema…</p>
         <div class="splash-progress" role="progressbar" aria-label="Inicializando sistema" aria-valuemin="0" aria-valuemax="100"><span></span></div>
       </div>
@@ -54,8 +54,8 @@
     <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title" hidden>
       <div class="auth-card">
         <p class="eyebrow">Acceso restringido · Promoción 2026</p>
-        <span class="auth-mark" aria-hidden="true">MH</span>
-        <h1 id="auth-title">Mecatronix Hub</h1>
+        <span class="auth-mark" aria-hidden="true">HUB</span>
+        <h1 id="auth-title">PROM 2026</h1>
         <p class="auth-description">Ingresa tus datos para iniciar el recorrido especial de la promoción.</p>
         <!-- El formulario no se envía al servidor: auth.js lo valida localmente. -->
         <form class="auth-form" id="auth-form" novalidate>
@@ -76,14 +76,14 @@
     <div id="protected-app" hidden>
       <!-- Cabecera persistente: los módulos del contenido se cargan abajo. -->
       <header class="site-header" id="top">
-        <a class="brand" href="#top" aria-label="Ir al inicio de Mecatronix Hub"><span class="brand-mark" aria-hidden="true">MH</span><span>Mecatronix <strong>Hub</strong></span></a>
+        <a class="brand" href="#top" aria-label="Ir al inicio de PROM 2026"><span class="brand-mark" aria-hidden="true">HUB</span><span>PROM 2026</span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="sr-only">Abrir menú</span><span aria-hidden="true">☰</span></button>
         <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal"><a href="#home">Inicio</a><a href="#dashboard">Dashboard</a><a href="#professor">Profesor</a><a href="#gallery">Galería</a><a href="#timeline">Recorrido</a><a href="#letter">Carta final</a></nav>
       </header>
       <!-- Progreso narrativo: refleja el capítulo visible de la experiencia. -->
       <div class="journey-progress" aria-label="Progreso del homenaje"><span class="journey-label" id="journey-label">Capítulo 1 de 7</span><span class="journey-track" aria-hidden="true"><span class="journey-fill" id="journey-fill"></span></span></div>
       <!-- Contenedor principal: main.js inserta los módulos HTML independientes. -->
-      <main id="app-content" aria-live="polite"><p class="loading-message">Preparando Mecatronix Hub…</p></main>
+      <main id="app-content" aria-live="polite"><p class="loading-message">PREPARANDO HOMENAJE...</p></main>
       <!-- Contenedor independiente para el pie de página. -->
       <div id="footer-slot"></div>
       <!-- Notificaciones de progreso; no interrumpen la navegación. -->
