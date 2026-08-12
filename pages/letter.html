@@ -1,8 +1,18 @@
 <!-- LETTER: revelación y cierre emocional de la experiencia. -->
 <section class="letter section-shell" id="letter" aria-labelledby="letter-title">
-  <div class="letter-content"><p class="eyebrow">Mensaje final</p><h2 id="letter-title">Unas palabras para nuestro profesor</h2><p data-typing>Profesor:</p><p data-typing>Todo esto comenzó con un simple “Hola Mundo”. Poco a poco fuimos mejorando, aprendiendo y enfrentándonos a nuevos retos. Con el pasar del tiempo, ese pequeño código se convirtió en proyectos, aprendizajes y experiencias que hoy nos han llevado hasta aquí, a tan solo un paso de graduarnos.</p><p data-typing>Fue un verdadero placer y una alegría tenerlo como nuestro profesor. Más que enseñarnos programación y los conocimientos de la modalidad, estuvo ahí cuando no entendíamos nada, cuando algo no funcionaba y cuando necesitábamos una mano para seguir adelante. De muchas maneras, terminó siendo como un segundo padre para nosotros, alguien que nos ayudó a creer en lo que somos capaces de hacer.</p><p class="letter-closing">Hoy queremos celebrar por adelantado su cumpleaños y agradecerle por haber sido una parte tan importante de nuestro camino. Gran parte de lo que somos y de lo que llegaremos a ser también lleva un poco de todo lo que usted nos enseñó.</p><p class="letter-signature">Con mucha alegría y gratitud, Promoción 2026 — Mecatrónica 💙⚙️</p></div>
+  <div class="letter-content"><p class="eyebrow">Mensaje final</p><h2 id="letter-title">Unas palabras para nuestro profesor</h2><p data-letter-step data-letter-greeting>Profesor Henry:</p><p data-letter-step>Hoy no queremos hablar solo de programación, proyectos o calificaciones. Queremos darle las gracias por cada momento en el que nos acompañó, nos corrigió con paciencia y nos animó a seguir cuando algo parecía difícil.</p><p data-letter-step>Con usted, un simple “Hola Mundo” se convirtió en aprendizajes, retos superados y recuerdos que llevaremos más allá de esta promoción. Nos enseñó a buscar soluciones, a confiar en nuestro equipo y, sobre todo, a creer en nuestras capacidades.</p><p data-letter-step>Fue un privilegio tenerlo como profesor y como guía. Su forma de enseñar dejó una huella en nuestra historia y en todo lo que construiremos después de graduarnos.</p><p class="letter-closing" data-letter-step>Hoy celebramos por adelantado su cumpleaños y le entregamos este pequeño homenaje con mucho cariño. Gracias por formar parte de nuestro camino, profesor.</p><p class="letter-signature" data-letter-step>Con gratitud, la Promoción 2026 de Mecatrónica 💙⚙️</p></div>
   <!-- Video final: controles manuales para no interrumpir la experiencia. -->
-  <figure class="surprise-video"><video controls preload="metadata"  src="video/sorpresa.mp4" type="video/mp4" />Tu navegador no puede reproducir este video.</video><figcaption>uno de los dias donde fue divertido y que se recordara por demasiado tiempo.</figcaption></figure>
-  <!-- La celebración se activa al finalizar el efecto de escritura. -->
-  <div class="birthday-celebration" id="birthday-celebration" hidden aria-live="polite"><p>🎉 ✨</p><h2>🎂 Feliz cumpleaños, Profesor</h2><p class="celebration-thanks">Gracias por formar parte de nuestra historia.</p></div>
+  <figure class="surprise-video" data-letter-epilogue><video controls preload="metadata" poster="img/profe/profe.jpg"><source src="video/sorpresa.mp4" type="video/mp4" />Tu navegador no puede reproducir este video.</video><figcaption>Uno de los días que recordaremos durante mucho tiempo.</figcaption><button class="button button-primary celebration-trigger" type="button">Ver celebración <span aria-hidden="true">✨</span></button></figure>
+  <!-- La celebración se activa al terminar el video o al usar el botón anterior. -->
+  <section class="birthday-celebration" id="birthday-celebration" hidden aria-live="polite" aria-labelledby="birthday-title">
+    <!-- Capas decorativas: confeti y destellos se añaden aquí sin afectar el mensaje. -->
+    <div class="celebration-effects" aria-hidden="true"></div>
+    <div class="celebration-content">
+      <p class="celebration-kicker">Promoción 2026 · Mecatrónica</p>
+      <p class="celebration-icons" aria-hidden="true">🎉 ✨ 🎂</p>
+      <h2 id="birthday-title">Feliz cumpleaños, profesor</h2>
+      <p class="celebration-thanks">Gracias por formar parte de nuestra historia.</p>
+      <p class="celebration-signature">Con admiración y gratitud, su Promoción 2026.</p>
+    </div>
+  </section>
 </section>

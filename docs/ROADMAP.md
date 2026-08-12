@@ -11,9 +11,9 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 | 1. Planeación | Completada | Narrativa, secciones y arquitectura definidas. |
 | 2. Diseño base | Completada | Sistema visual SaaS/Dashboard, paleta y tipografías integradas. |
 | 3. Estructura modular | Completada | Shell, acceso de demostración, parciales HTML, CSS y JS separados por responsabilidad. |
-| 4. Contenido real | En curso | Fotografías, nombres, mensajes y carta definitiva del curso. |
-| 5. Interacciones | En curso | Galería, timeline y revelación final con base funcional. |
-| 6. QA y entrega | Pendiente | Pruebas, accesibilidad, optimización y publicación. |
+| 4. Contenido real | Completada | Fotografías, video, homenaje y carta incorporados. |
+| 5. Interacciones | Completada | Galería, timeline, progreso y revelación final implementados. |
+| 6. QA y entrega | En curso | Revisión estática completada; faltan pruebas manuales y publicación. |
 
 ---
 
@@ -94,37 +94,36 @@ Crear una experiencia web estática para el cumpleaños del profesor de Mecatró
 
 ---
 
-## Fase 4 — Contenido definitivo 🔄
+## Fase 4 — Contenido definitivo ✅
 
 ### Profesor
 
-- [ ] Añadir su nombre, cargo y frase que haya aprobado.
-- [ ] Reemplazar `img/professor/profesor-principal.jpg` por la fotografía final.
-- [ ] Revisar que el texto alternativo describa correctamente la foto definitiva.
+- [x] Integrar la fotografía real del profesor Henry.
+- [x] Añadir mensaje de homenaje y despedida de la Promoción 2026.
+- [x] Revisar el texto alternativo de la fotografía principal.
 
 ### Galería
 
-- [ ] Crear `img/gallery/` y añadir imágenes optimizadas en WebP o AVIF.
-- [ ] Reemplazar las tres imágenes de ejemplo por fotografías reales.
-- [ ] Escribir pies de foto concretos y respetuosos.
+- [x] Incorporar tres fotografías reales en `img/recuerdos/`.
+- [x] Reemplazar las imágenes de ejemplo de la galería.
+- [x] Añadir pies de foto y textos alternativos descriptivos.
 
 ### Mensajes y carta
 
-- [ ] Reemplazar testimonios de ejemplo por mensajes aprobados de estudiantes.
-- [ ] Confirmar ortografía de nombres y firmas.
-- [ ] Ajustar la carta final con la versión consensuada por el curso.
+- [x] Integrar los mensajes y la carta final del homenaje.
+- [ ] Añadir nombres individuales de estudiantes en créditos, si el curso decide incluirlos.
 
 ### Métricas y timeline
 
-- [ ] Verificar cifras reales antes de publicarlas.
-- [ ] Ajustar hitos y fechas relevantes de la promoción.
-- [ ] Incluir graduación o cumpleaños solo cuando la fecha esté confirmada.
+- [x] Definir los hitos narrativos del recorrido y la celebración de cumpleaños.
+- [x] Diferenciar datos de la promoción e indicador simbólico en el Dashboard.
+- [ ] Confirmar las cifras `26`, `2` y `24` antes de la presentación pública.
 
-**Criterio de cierre:** no quedan textos de ejemplo ni rutas de imágenes inexistentes.
+**Criterio de cierre:** cumplido para el contenido actual. Solo quedan firmas opcionales y validación final de cifras.
 
 ---
 
-## Fase 5 — Interacciones y animaciones ⏳
+## Fase 5 — Interacciones y animaciones ✅
 
 Implementar con mejora progresiva: el contenido debe seguir siendo legible aunque JavaScript falle o el usuario prefiera reducir movimiento.
 
@@ -135,25 +134,27 @@ Implementar con mejora progresiva: el contenido debe seguir siendo legible aunqu
 - [x] Efecto de escritura progresivo para la carta.
 - [x] Confeti y celebración al finalizar la carta.
 - [x] Soporte para `prefers-reduced-motion`.
+- [x] Barra de progreso, logros por capítulo y Easter Egg discreto.
 
 **Criterio de cierre:** las animaciones aportan significado, no bloquean navegación y no reducen accesibilidad.
 
 ---
 
-## Fase 6 — Calidad, accesibilidad y optimización ⏳
+## Fase 6 — Calidad, accesibilidad y optimización 🔄
 
 ### Accesibilidad
 
-- [ ] Validar jerarquía de encabezados y landmarks HTML.
-- [ ] Probar navegación completa con teclado.
-- [ ] Revisar foco visible, contraste de color y tamaño de texto.
-- [ ] Validar `alt` de todas las fotografías reales.
+- [x] Mantener landmarks, encabezados y HTML semántico por sección.
+- [x] Añadir foco visible y enlace para saltar al contenido.
+- [x] Validar textos alternativos de las fotografías actuales.
+- [ ] Probar navegación completa con teclado en un navegador real.
+- [ ] Comprobar el menú móvil con lector de pantalla.
 - [ ] Comprobar el menú móvil con lector de pantalla.
 
 ### Rendimiento
 
 - [ ] Convertir imágenes a WebP/AVIF y definir dimensiones.
-- [ ] Aplicar carga diferida a la galería.
+- [x] Aplicar carga diferida a la galería.
 - [ ] Comprimir el vídeo antes de añadirlo.
 - [ ] Medir rendimiento en móvil con Lighthouse.
 
@@ -162,7 +163,8 @@ Implementar con mejora progresiva: el contenido debe seguir siendo legible aunqu
 - [ ] Probar Chrome, Edge, Firefox y Safari si es posible.
 - [ ] Probar resoluciones móvil, tablet y escritorio.
 - [ ] Comprobar que el proyecto se abre desde un servidor local estático.
-- [ ] Revisar enlaces internos, imágenes y consola sin errores.
+- [x] Revisar rutas locales, módulos y formato mediante validación estática.
+- [ ] Revisar consola sin errores en un navegador real.
 - [ ] Preparar una copia de respaldo antes de la presentación.
 
 **Criterio de cierre:** experiencia funcional, accesible y verificada en los dispositivos disponibles.

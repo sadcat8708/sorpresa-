@@ -3,6 +3,9 @@ const DEMO_PASSWORD = "123";
 const LOADING_DELAY_MS = 2500;
 const ACCESS_MESSAGES = ["Verificando credenciales…", "Cargando módulos…", "Preparando experiencia…", "Acceso concedido."];
 
+// Evita que el navegador restaure una posición anterior como #timeline al recargar.
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
 // Actualiza el mensaje de carga sin crear una nueva estructura visual.
 function showAccessMessages(loading) {
   const message = loading.querySelector("p");
@@ -30,18 +33,26 @@ export function initAuth(onAuthorized) {
     form.hidden = true;
     loading.hidden = false;
     showAccessMessages(loading);
-    window.setTimeout(() => {
-      // Paso 2: se muestra el dashboard y se inicia su transición de entrada.
+    window.setTimeout(async () => {
+      // Paso 2: se carga el dashboard antes de hacerlo visible para evitar un estado intermedio vacío.
+      await onAuthorized();
       app.hidden = false;
-      onAuthorized();
       window.requestAnimationFrame(() => app.classList.add("app-visible"));
 
       // Paso 3: el Login se desvanece. Al terminar, remove() lo elimina por completo del DOM.
       screen.classList.add("is-exiting");
-      screen.addEventListener("animationend", () => screen.remove(), { once: true });
+      screen.addEventListener("animationend", () => {
+        // El reflujo al eliminar el Login puede alterar el scroll; se reinicia después de remove().
+        screen.remove();
+        window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
+      }, { once: true });
 
-      // Paso 4: el foco llega al contenido principal; ya no existe una ruta normal al Login.
-      document.querySelector("#top")?.focus();
+      // Paso 4: se elimina cualquier ancla anterior (por ejemplo, #timeline) y se inicia el relato desde Inicio.
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      window.scrollTo({ top: 0, behavior: "auto" });
+
+      // Paso 5: el foco llega al contenido principal; ya no existe una ruta normal al Login.
+      document.querySelector("#app-content")?.focus();
     }, LOADING_DELAY_MS);
   });
 }

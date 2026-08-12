@@ -74,6 +74,8 @@
 
     <!-- El dashboard se mantiene oculto hasta que auth.js autorice el acceso. -->
     <div id="protected-app" hidden>
+      <!-- Atajo de teclado para ir directamente al contenido tras iniciar sesión. -->
+      <a class="skip-link" href="#app-content">Saltar al contenido principal</a>
       <!-- Cabecera persistente: los módulos del contenido se cargan abajo. -->
       <header class="site-header" id="top">
         <a class="brand" href="#top" aria-label="Ir al inicio de PROM 2026"><span class="brand-mark" aria-hidden="true">HUB</span><span>PROM 2026</span></a>
@@ -83,7 +85,7 @@
       <!-- Progreso narrativo: refleja el capítulo visible de la experiencia. -->
       <div class="journey-progress" aria-label="Progreso del homenaje"><span class="journey-label" id="journey-label">Capítulo 1 de 7</span><span class="journey-track" aria-hidden="true"><span class="journey-fill" id="journey-fill"></span></span></div>
       <!-- Contenedor principal: main.js inserta los módulos HTML independientes. -->
-      <main id="app-content" aria-live="polite"><p class="loading-message">PREPARANDO HOMENAJE...</p></main>
+      <main id="app-content" tabindex="-1" aria-live="polite"><p class="loading-message">PREPARANDO HOMENAJE...</p></main>
       <!-- Contenedor independiente para el pie de página. -->
       <div id="footer-slot"></div>
       <!-- Notificaciones de progreso; no interrumpen la navegación. -->
