@@ -153,9 +153,9 @@ Implementar con mejora progresiva: el contenido debe seguir siendo legible aunqu
 
 ### Rendimiento
 
-- [ ] Convertir imágenes a WebP/AVIF y definir dimensiones.
+- [x] Convertir imágenes JPEG a WebP, conservar originales y definir dimensiones.
 - [x] Aplicar carga diferida a la galería.
-- [ ] Comprimir el vídeo antes de añadirlo.
+- [x] Comprimir el vídeo en MP4/H.264 con carga rápida (`faststart`).
 - [ ] Medir rendimiento en móvil con Lighthouse.
 
 ### Pruebas y entrega
