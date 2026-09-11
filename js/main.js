@@ -8,7 +8,6 @@ import { initTyping } from "./typing.js";
 import { initAuth } from "./auth.js";
 import { initSplash } from "./splash.js";
 import { initProgress } from "./progress.js";
-import { initAchievements } from "./achievements.js";
 import { initEasterEgg } from "./easter-egg.js";
 
 const sectionFiles = ["hero", "dashboard", "professor", "projects", "gallery", "timeline", "messages", "letter", "credits"];
@@ -33,7 +32,7 @@ async function bootstrap() {
     // La carga es secuencial para conservar el orden narrativo del recorrido.
     for (const file of sectionFiles) await loadFragment(file, content);
     await loadFragment("footer", footer);
-    [initNavbar, initGallery, initAnimations, initTimeline, initConfetti, initTyping, initProgress, initAchievements, initEasterEgg].forEach((init) => init());
+    [initNavbar, initGallery, initAnimations, initTimeline, initConfetti, initTyping, initProgress, initEasterEgg].forEach((init) => init());
   } catch (error) {
     hasBootstrapped = false;
     console.error(error);

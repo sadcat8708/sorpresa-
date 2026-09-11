@@ -1,27 +1,34 @@
-# 🎓 Mecatronix Hub — Promoción 2026
+# 🎓 PROM 2026  Hub — Promoción 2026
 
-Sitio web conmemorativo de la Promoción 2026 de Mecatrónica. El proyecto rinde homenaje a un profesor en su cumpleaños y agradece su conocimiento, paciencia y compromiso durante la formación del curso.
+Experiencia web estática creada por la Promoción 2026 de Mecatrónica como homenaje de cumpleaños y agradecimiento al profesor Henry. Inicia como una plataforma tecnológica y revela progresivamente recuerdos, mensajes y una carta final.
 
-## Objetivo
+## Características actuales
 
-Crear una experiencia interactiva que combine tecnología, diseño y gratitud. El sitio se presenta inicialmente como un portal académico y, durante la navegación, revela mensajes, recuerdos y una dedicatoria especial.
+- Splash screen y acceso local de demostración antes de mostrar el contenido.
+- Navegación fija, responsive y con progreso del recorrido.
+- Dashboard con métricas de la promoción, claramente marcadas como datos o indicadores simbólicos.
+- Perfil del profesor, proyectos, galería con visor de imágenes, timeline y mensajes.
+- Carta final con revelado gradual, video y celebración opcional con confeti y destellos.
+- Soporte para `prefers-reduced-motion`, foco visible, landmarks semánticos y textos alternativos.
 
 ## Tecnologías
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML5 semántico
+- CSS3 modular
+- JavaScript nativo con módulos ES
 
-El proyecto no usa base de datos, PHP ni frameworks. Como las secciones se cargan como fragmentos HTML, debe abrirse desde un servidor local estático (por ejemplo, Live Server), no directamente con `file://`.
+No utiliza frameworks, base de datos ni servicios de terceros. El acceso es solamente visual: la contraseña está declarada en `js/auth.js` y no ofrece seguridad real.
 
-## Arquitectura
+## Acceso de demostración
 
-`index.html` es el shell de la aplicación. `js/main.js` inserta los fragmentos de `pages/` en el orden narrativo del homenaje; los estilos y scripts se separan por responsabilidad.
+Usa cualquier nombre de usuario y la contraseña `123`.
+
+## Estructura
 
 ```text
-Mecatronix-Hub/
-├── index.html
-├── pages/
+sorpresa-/
+├── index.html                 # Shell, splash, acceso y contenedores de la app
+├── pages/                     # Fragmentos HTML cargados por main.js
 │   ├── hero.html
 │   ├── dashboard.html
 │   ├── professor.html
@@ -30,53 +37,51 @@ Mecatronix-Hub/
 │   ├── timeline.html
 │   ├── messages.html
 │   ├── letter.html
+│   ├── credits.html
 │   └── footer.html
-├── css/
-│   ├── variables.css
-│   ├── global.css
-│   ├── layout.css
-│   ├── [component].css
-│   └── responsive.css
-├── js/
-│   ├── main.js
-│   ├── navbar.js
-│   ├── gallery.js
-│   └── [feature].js
-├── img/
+├── css/                       # Tokens, layout, componentes, animaciones y responsive
+├── js/                        # Módulos de acceso, navegación e interacciones
+├── img/                       # Ilustración, foto del profesor y recuerdos originales
 ├── video/
+│   ├── original/              # Video fuente conservado como respaldo
+│   └── optimized/             # MP4/H.264 usado por la página
+├── docs/
+│   ├── PRD.md                 # Requisitos y alcance vigente
+│   └── ROADMAP.md             # Estado y pendientes de entrega
 └── README.md
 ```
 
-## Uso local
+## Ejecución local
 
-Ejecuta el proyecto con una extensión de servidor local, como Live Server en VS Code, y abre la dirección que indique. Esto permite que el navegador cargue los archivos de `pages/` mediante `fetch`.
+El proyecto debe ejecutarse desde un servidor estático, porque `js/main.js` carga los fragmentos de `pages/` mediante `fetch`.
 
-## Experiencia prevista
+Puedes usar Live Server en VS Code o ejecutar:
 
-- **Inicio:** presentación con estética de dashboard académico moderno.
-- **Nosotros:** información sobre la Promoción 2026 de Mecatrónica.
-- **Herramientas:** anécdotas y enseñanzas del profesor presentadas como recursos académicos.
-- **Calendario:** fechas importantes, como proyectos destacados, cumpleaños y graduación.
-- **Dashboard:** indicadores simbólicos de proyectos, horas de aprendizaje, sonrisas compartidas y generaciones inspiradas.
-- **Galería:** fotografías del curso y momentos especiales.
-- **Mensajes:** agradecimientos escritos por los estudiantes.
-- **Carta final:** dedicatoria colectiva de cumpleaños.
+```powershell
+py -m http.server 4173
+```
 
-## Animaciones previstas
+Después abre `http://localhost:4173` en el navegador. No abras `index.html` directamente con `file://`.
 
-- Aparición suave y efecto hover en tarjetas.
-- Contadores animados y efecto de máquina de escribir.
-- Confeti, fuegos artificiales y corazones discretos.
-- Brillo en botones.
+## Recorrido
 
-## Compatibilidad
+```text
+Splash → Login → Hero → Dashboard → Profesor → Proyectos → Galería
+      → Timeline → Mensajes → Carta → Video/Celebración → Créditos
+```
 
-El diseño se preparará para computador, tablet y celular.
+## Recursos
+
+- Las fotografías de la página usan los archivos JPG originales ubicados en `img/profe/` e `img/recuerdos/`.
+- El video activo es `video/optimized/sorpresa-optimized.mp4`; el original permanece en `video/original/`.
+- No hay reproducción automática ni módulo de música.
+
+## Verificaciones recomendadas antes de presentar
+
+- Abrir desde un servidor local y revisar la consola del navegador.
+- Probar el menú y el botón “Volver al inicio” en móvil y escritorio.
+- Confirmar el contenido, las métricas y las fotografías con la promoción.
 
 ## Créditos
 
-Desarrollado con cariño por la Promoción 2026 de Mecatrónica como recuerdo de una etapa inolvidable.
-
-> “Las mejores máquinas pueden construirse con acero, pero los mejores ingenieros se forman gracias a buenos maestros.”
-
-Muchas gracias, profesor.
+Desarrollado con gratitud por la Promoción 2026 de Mecatrónica.
