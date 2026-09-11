@@ -34,6 +34,7 @@
 - [x] Cargar las secciones en orden desde `js/main.js`.
 - [x] Incorporar pantalla splash y acceso de demostración.
 - [x] Integrar una fotografía del profesor, 17 recuerdos, SVG del Hero y video MP4/H.264.
+- [x] Generar WebP de alta calidad para las 18 fotografías activas sin cambiar sus dimensiones; conservar los JPG como respaldo.
 - [x] Mantener el video original como respaldo en `video/original/`.
 
 ### 4. Experiencia e interacciones ✅

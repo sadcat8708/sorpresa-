@@ -78,12 +78,12 @@ Crear un recuerdo digital elegante, emotivo y navegable que se perciba inicialme
 | `js/main.js` | Carga de fragmentos e inicialización de módulos. |
 | `js/auth.js` y `js/splash.js` | Secuencia Splash → Login → contenido. |
 | `js/gallery.js`, `typing.js`, `confetti.js` | Experiencia visual de galería y cierre. |
-| `img/` y `video/` | Recursos reales utilizados por la experiencia. |
+| `img/` y `video/` | Recursos reales; los JPG se conservan y los WebP optimizados son los activos. |
 
 ## 8. Recursos actuales
 
-- 1 fotografía principal del profesor.
-- 17 fotografías de recuerdos en formato JPG original.
+- 1 fotografía principal y 17 recuerdos conservados en JPG original.
+- 18 versiones WebP activas, con las mismas dimensiones de sus archivos fuente.
 - 1 video original de respaldo y 1 MP4/H.264 optimizado para la página.
 - Ilustración SVG para el Hero.
 

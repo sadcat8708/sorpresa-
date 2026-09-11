@@ -41,7 +41,10 @@ sorpresa-/
 │   └── footer.html
 ├── css/                       # Tokens, layout, componentes, animaciones y responsive
 ├── js/                        # Módulos de acceso, navegación e interacciones
-├── img/                       # Ilustración, foto del profesor y recuerdos originales
+├── img/
+│   ├── profe/                 # Fotografía JPG original del profesor
+│   ├── recuerdos/             # Fotografías JPG originales de respaldo
+│   └── optimized/             # Versiones WebP usadas por la página
 ├── video/
 │   ├── original/              # Video fuente conservado como respaldo
 │   └── optimized/             # MP4/H.264 usado por la página
@@ -72,7 +75,7 @@ Splash → Login → Hero → Dashboard → Profesor → Proyectos → Galería
 
 ## Recursos
 
-- Las fotografías de la página usan los archivos JPG originales ubicados en `img/profe/` e `img/recuerdos/`.
+- La página usa las versiones WebP de `img/optimized/`; los JPG originales se conservan en `img/profe/` e `img/recuerdos/` como respaldo.
 - El video activo es `video/optimized/sorpresa-optimized.mp4`; el original permanece en `video/original/`.
 - No hay reproducción automática ni módulo de música.
 
