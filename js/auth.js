@@ -1,5 +1,5 @@
 // Autenticación de demostración: esta clave es visible en el navegador y no protege datos reales.
-const DEMO_PASSWORD = "123";
+const DEMO_PASSWORD = "PROM2026";
 const LOADING_DELAY_MS = 2500;
 const ACCESS_MESSAGES = ["Verificando credenciales…", "Cargando módulos…", "Preparando experiencia…", "Acceso concedido."];
 
